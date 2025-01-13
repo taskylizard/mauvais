@@ -1,0 +1,47 @@
+{
+  "name": "mauvais",
+  "version": "0.0.0",
+  "module": "src/index.ts",
+  "description": "Remove the slop from the slopfest",
+  "type": "module",
+  "author": "taskylizard",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taskylizard/mauvais.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taskylizard/mauvais/issues"
+  },
+  "homepage": "https://github.com/taskylizard/mauvais#readme",
+  "scripts": {
+    "build": "bun build.ts",
+    "build:dev": "bun build.ts --dev",
+    "build:watch": "bun build.ts --dev --watch",
+    "build:workflow": "bun build.ts --release-channel GitHubRelease",
+    "clean": "rm -rf ./dist/",
+    "dev": "bun build.ts --dev --server --watch"
+  },
+  "userscriptHeader": {
+    "@match": [
+      "http*://fmhy.net/*"
+    ],
+    "@grant": "GM_addStyle"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-style-loader": "^0.4.0",
+    "@types/yargs": "^17.0.33",
+    "sass": "^1.79.4",
+    "type-fest": "^4.26.1",
+    "winston": "^3.14.2",
+    "yargs": "^17.7.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}
